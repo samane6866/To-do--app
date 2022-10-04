@@ -1,8 +1,16 @@
 <template>
-  <div>hello</div>
+  <div>
+    <div>
+      <h1>Manage all your daily Task</h1>
+      <h3>Dont forget to add...</h3>
+    </div>
+    <Footer />
+  </div>
 </template>
 
-<script setup></script>
+<script setup>
+import Footer from "../components/Footer.vue";
+</script>
 
 <style></style>
 
