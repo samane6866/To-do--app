@@ -3,7 +3,7 @@
     <div class="footer">
       <div class="icon">
         <img class="cucti-icon" src="images.png" alt="cactus" />
-        <h3>Cucti App</h3>
+        <h2>Cucti Task</h2>
       </div>
     </div>
   </div>
@@ -11,19 +11,26 @@
 
 <script setup></script>
 
-<style>
-.cucti-icon {
-  width: 300px;
-  height: 100px;
-}
-
+<style scoped>
 .container {
-  max-width: 1300px;
-  background-color: #d8f3dc;
+  margin-top: 600px;
 }
-.container h3 {
-  font-size: 30px;
-  font-weight: lighter;
-  color: #4c956c;
+.footer {
+  width: 1360px;
+  height: 200px;
+  margin: auto;
+  background-color: #f4f3ee;
+}
+.icon {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+.icon h2 {
+  font-family: sans-serif;
+  font-size: 45px;
+  color: #2d6a4f;
+  font-weight: bold;
 }
 </style>
