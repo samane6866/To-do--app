@@ -31,7 +31,7 @@
         <div class="flip-card-inner">
           <div class="flip-card-front">
             <img
-              src="shop.jpg"
+              src="../../public/shopping.jpg"
               alt="shoping"
               style="width: 300px; height: 300px"
             />

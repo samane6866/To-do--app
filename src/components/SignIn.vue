@@ -1,27 +1,24 @@
 <template>
-  <div>
-    <div>Sign In</div>
-    <PersonalRouter :route="route" :buttonText="buttonText" />
-    <p>Time to build up the Final Project!</p>
-    <p class="wu-text">Wu Tang Forever</p>
-    <p v-if="errorMsg" class="">
-      {{ errorMsg }}
-    </p>
-    <form @submit.prevent="signIn">
-      <div class="">
-        <label class="" for="">Email</label>
-        <input
-          class=""
-          type="email"
-          placeholder="dave@wuTangfinancial.com"
-          v-model="email"
-          id="email"
-        />
-      </div>
-      <div class="mb-4">
-        <label class="" for="">Password</label>
+  <div id="body2">
+    <div class="container">
+      <div class="main-log">
+        <PersonalRouter :route="route" :buttonText="buttonText" />
 
-        <div class="">
+        <p v-if="errorMsg" class="">
+          {{ errorMsg }}
+        </p>
+        <form @submit.prevent="signIn" class="form-1">
+          <h1>Sign In</h1>
+          <label class="" for="">Email</label>
+          <input
+            class="input-email"
+            type="email"
+            placeholder="dave@wuTangfinancial.com"
+            v-model="email"
+            id="email"
+          />
+
+          <label class="" for="">Password</label>
           <input
             class=""
             :type="passwordFieldType"
@@ -36,16 +33,19 @@
               @click.prevent="hidePassword = !hidePassword"
             />
           </span>
-        </div>
+
+          <div class="clear">
+            <button class="" type="submit">Sign In</button>
+          </div>
+          <p class="">
+            <span class="">Don’t have an account? </span>
+
+            <PersonalRouter :route="route" :buttonText="buttonText" />
+          </p>
+        </form>
       </div>
-
-      <button class="" type="submit">Sign In</button>
-      <p class="">
-        <span class="">Don’t have an account? </span>
-
-        <PersonalRouter :route="route" :buttonText="buttonText" />
-      </p>
-    </form>
+      <img src="../../public/todo.jpg" alt="" />
+    </div>
   </div>
 </template>
 
@@ -95,28 +95,74 @@ const signIn = async () => {
 };
 </script>
 
-<style>
-.wu-text {
-  color: black;
-}
-
-.form {
+<style scoped>
+.main-log {
   display: flex;
   flex-direction: column;
-  margin: 1rem 0;
+  justify-content: space-evenly;
 }
-.input {
-  color: black;
-  margin-bottom: 1rem;
+.form-1 {
+  margin-left: 120px;
+  margin-right: 120px;
+  width: 250px;
+  height: 800px;
+  margin-top: 150px;
 }
-.button {
-  background-color: #4caf50; /* Green */
-  border: none;
-  color: white;
-  padding: 10px 10px;
-  text-align: center;
-  text-decoration: none;
+
+.container {
+  display: flex;
+  background-color: rgb(247, 247, 246);
+}
+
+.input-email {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
   display: inline-block;
-  font-size: 16px;
+  border: none;
+
+  background: #f1f1f1;
+
+  border: double 3px transparent;
+
+  background-image: linear-gradient(white, white),
+    linear-gradient(to right, green, rgb(202, 230, 143));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.input-email :focus {
+  background-color: #ddd;
+  outline: none;
+}
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+input[type="text"]:focus,
+input[type="password"]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+button {
+  background-color: #2d6a4f;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  margin-left: 5px;
+}
+
+#body2 {
+  padding-top: 100px;
+  margin-bottom: 100px;
 }
 </style>

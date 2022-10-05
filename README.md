@@ -79,3 +79,12 @@ working on css Home.vue
 . Nav bar css/JS
 . CSS log-in page
 . start logical part of project
+
+# wendsday 05-10.2022
+
+. css log-in page
+. css sign up page
+
+# Next plan
+
+.start js
