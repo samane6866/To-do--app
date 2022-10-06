@@ -7,7 +7,11 @@
 //   ENTER-EMITS-HERE
 // ])
 
+import { stringifyQuery } from "vue-router";
+
 // const props = defineProps(["ENTER-PROP-HERE"]);
+
+const props = defineProps([]);
 </script>
 
 <style></style>

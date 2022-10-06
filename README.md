@@ -88,3 +88,14 @@ working on css Home.vue
 # Next plan
 
 .start js
+
+# Thursday 06-10-2022
+
+function of log-in log-out
+make a Task (some difficulty)
+
+# Next plan
+
+. complete Task
+. Make a new Task
+. Delet Task

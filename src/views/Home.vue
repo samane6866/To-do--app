@@ -72,13 +72,14 @@
     </div>
 
     <div class="main-input">
-      <p>
+      <p v-for="(title, index) in titles" :key="index">
         <span class="input">
           <input
             id="name"
             class="task-T"
             placeholder="Add a Task titel"
             type="text"
+            v-model="title"
           />
           <span></span>
         </span>
@@ -91,12 +92,13 @@
             class="task-T"
             placeholder="Add a Task titel"
             type="text"
+            v-model="description"
           />
           <span></span>
         </span>
       </p>
 
-      <button class="Btn-block" type="submit">Add</button>
+      <button @click="addNewTask" class="Btn-block" type="submit">Add</button>
     </div>
 
     <Footer />
@@ -106,6 +108,15 @@
 <script setup>
 import Footer from "../components/Footer.vue";
 import Nav from "../components/Nav.vue";
+import { useTaskStore } from "../stores/task";
+import { ref } from "vue";
+
+const title = ref("");
+const description = ref("");
+
+function addNewTask() {
+  useTaskStore().addTask(title.value, description.value);
+}
 </script>
 
 <style scoped>
