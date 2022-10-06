@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Nav />
     <div class="main-titel">
       <h1>Manage all your daily Task</h1>
       <h3>Dont forget to add...</h3>
@@ -104,6 +105,7 @@
 
 <script setup>
 import Footer from "../components/Footer.vue";
+import Nav from "../components/Nav.vue";
 </script>
 
 <style scoped>

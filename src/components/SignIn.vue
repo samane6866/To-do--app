@@ -116,7 +116,7 @@ const signIn = async () => {
 
 .input-email {
   width: 100%;
-  padding: 15px;
+  padding: 10px;
   margin: 5px 0 22px 0;
   display: inline-block;
   border: none;
@@ -126,9 +126,13 @@ const signIn = async () => {
   border: double 3px transparent;
 
   background-image: linear-gradient(white, white),
-    linear-gradient(to right, green, rgb(202, 230, 143));
+    linear-gradient(to right, rgb(100, 165, 118), rgb(202, 230, 143));
   background-origin: border-box;
   background-clip: padding-box, border-box;
+  border-radius: 999px;
+
+  box-shadow: inset 0 0 0 3px #fff, 0 0 0 4px #fff, 1px -3px 20px #75e292,
+    -3px 3px 30px #1f5741;
 }
 
 .input-email :focus {
