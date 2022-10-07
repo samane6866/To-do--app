@@ -71,36 +71,59 @@
       </div>
     </div>
 
-    <div class="main-input">
-      <p v-for="(title, index) in titles" :key="index">
-        <span class="input">
+    <div class="container3">
+      <div class="input-field">
+        <span>
           <input
             id="name"
-            class="task-T"
+            class="task-1"
             placeholder="Add a Task titel"
             type="text"
             v-model="title"
           />
           <span></span>
         </span>
-      </p>
 
-      <p>
-        <span class="input">
+        <span>
           <input
             id="name"
-            class="task-T"
-            placeholder="Add a Task titel"
+            class="task-2"
+            placeholder="Add a Task description"
             type="text"
             v-model="description"
           />
           <span></span>
         </span>
-      </p>
 
-      <button @click="addNewTask" class="Btn-block" type="submit">Add</button>
+        <button @click="addNewTask" class="Btn-block" type="submit">Add</button>
+      </div>
     </div>
 
+    <ul class="todolist">
+      <li class="list">
+        <input type="checkbox" />
+        <span class="taskitem">buy bread</span>
+        <i class="trash"></i>
+      </li>
+      <li class="list">
+        <input type="checkbox" />
+        <span class="task">going to gym</span>
+        <i class="trash"></i>
+      </li>
+    </ul>
+    <div class="pending-tasks">
+      <span>You have<span>no</span>tasks pending.</span>
+      <button class="clear">Clear All</button>
+    </div>
+
+    <section class="taskList">
+      <p>Aquí irán las tareas</p>
+      <TaskItem
+        class="background-blue"
+        v-for="(task, index) in taskList"
+        :item="task"
+      />
+    </section>
     <Footer />
   </div>
 </template>
@@ -110,16 +133,87 @@ import Footer from "../components/Footer.vue";
 import Nav from "../components/Nav.vue";
 import { useTaskStore } from "../stores/task";
 import { ref } from "vue";
+import TaskItem from "../components/TaskItem.vue";
 
 const title = ref("");
 const description = ref("");
+const taskList = ref([]);
+const prueba = ref("");
 
 function addNewTask() {
   useTaskStore().addTask(title.value, description.value);
+  getTask();
 }
+
+async function getTask() {
+  taskList.value = await useTaskStore().fetchTasks();
+  prueba.value = taskList.value[4];
+}
+getTask();
+
+// deleteTaskList(index);
+// {
+//   this.taskList.splice(index, 1);
+// }
 </script>
 
 <style scoped>
+.container3 {
+  position: relative;
+  max-width: 480px;
+  width: 100%;
+  background-color: rgb(221, 255, 227);
+  box-shadow: 0 5px 15px rgb(135, 201, 135);
+  border-radius: 8px;
+  margin: 85px auto 0;
+  padding: 25px;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 200px; */
+}
+.container3 .input-field {
+  position: relative;
+  height: 64px;
+  width: 100%;
+}
+.task-1 {
+  height: 15px;
+  width: 400px;
+}
+.input-field .task-1 {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: 1px solid green;
+  padding: 18px 45px 18px 15px;
+  border-radius: 8px;
+}
+
+.container3 .todolist {
+  margin-top: 20px;
+}
+.todolist .list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  padding: 20px 15px;
+  background-color: #cce7cc;
+  position: relative;
+}
+
+.todolist .list .task {
+  margin: 0 30px 0 15px;
+}
+
+.todolist .list input {
+  height: 16px;
+  width: 16px;
+}
+
+.in .background-blue {
+  background-color: blue;
+}
 .main-titel {
   display: flex;
   flex-direction: column;
@@ -143,12 +237,12 @@ function addNewTask() {
     Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
 }
-.main-input {
+/* .main-input {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 200px;
-}
+} */
 
 .cards {
   display: flex;
@@ -200,15 +294,17 @@ function addNewTask() {
   font-size: 20px;
 }
 
-.input {
-  padding: 0.5rem;
+/* .input {
+  padding: 10px 20px 10px 10px;
+  width: 100%;
+  height: 100%;
   border: double 3px transparent;
   border-radius: 6px;
   background-image: linear-gradient(white, white),
     linear-gradient(to right, green, rgb(249, 249, 206));
   background-origin: border-box;
   background-clip: padding-box, border-box;
-}
+} */
 </style>
 
 <!-- 

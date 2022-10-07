@@ -1,8 +1,15 @@
 <template>
-  <div>Task Item Component</div>
+  <div class="border-green">
+    <p>{{ item.title }}</p>
+    <p>{{ item.description }}</p>
+    <button>Completele</button>
+    <button>Modify</button>
+    <!-- <button @click="deleteTaskList(index)">Delete</button> -->
+  </div>
 </template>
 
 <script setup>
+const props = defineProps(["Item"]);
 // const emit = defineEmits([
 //   ENTER-EMITS-HERE
 // ])
@@ -11,10 +18,16 @@ import { stringifyQuery } from "vue-router";
 
 // const props = defineProps(["ENTER-PROP-HERE"]);
 
-const props = defineProps([]);
+// const props = defineProps([]);
 </script>
 
-<style></style>
+<style>
+.border-green {
+  border: 2px green solid;
+  margin: 5px;
+  display: flex;
+}
+</style>
 
 <!-- 
 **Hints**
