@@ -97,33 +97,33 @@
 
         <button @click="addNewTask" class="Btn-block" type="submit">Add</button>
       </div>
+      <!-- <ul class="todolist">
+        <li class="list">
+          <input type="checkbox" />
+          <span class="taskitem">buy bread</span>
+          <i class="trash"></i>
+        </li>
+        <li class="list">
+          <input type="checkbox" />
+          <span class="task">going to gym</span>
+          <i class="trash"></i>
+        </li>
+      </ul> -->
+      <section class="taskList">
+        <p>Aquí irán las tareas</p>
+        <TaskItem
+          v-for="task in taskList"
+          :key="task.id"
+          :item="task"
+          @refreshList="getTask"
+        />
+      </section>
+      <div class="pending-tasks">
+        <span>You have<span>no</span>tasks pending.</span>
+        <button class="clear">Clear All</button>
+      </div>
     </div>
 
-    <ul class="todolist">
-      <li class="list">
-        <input type="checkbox" />
-        <span class="taskitem">buy bread</span>
-        <i class="trash"></i>
-      </li>
-      <li class="list">
-        <input type="checkbox" />
-        <span class="task">going to gym</span>
-        <i class="trash"></i>
-      </li>
-    </ul>
-    <div class="pending-tasks">
-      <span>You have<span>no</span>tasks pending.</span>
-      <button class="clear">Clear All</button>
-    </div>
-
-    <section class="taskList">
-      <p>Aquí irán las tareas</p>
-      <TaskItem
-        class="background-blue"
-        v-for="(task, index) in taskList"
-        :item="task"
-      />
-    </section>
     <Footer />
   </div>
 </template>
@@ -140,18 +140,24 @@ const description = ref("");
 const taskList = ref([]);
 const prueba = ref("");
 
-function addNewTask() {
-  useTaskStore().addTask(title.value, description.value);
-  getTask();
-}
-
 async function getTask() {
   taskList.value = await useTaskStore().fetchTasks();
   prueba.value = taskList.value[4];
 }
 getTask();
 
-// deleteTaskList(index);
+async function addNewTask() {
+  await useTaskStore().addTask(title.value, description.value);
+  getTask();
+}
+async function deleteOneItem(itemId) {
+  const { data, error } = await supabase
+    .from("items")
+    .delete()
+    .match({ id: itemId });
+}
+
+//  deleteTaskList(index);
 // {
 //   this.taskList.splice(index, 1);
 // }
@@ -162,10 +168,12 @@ getTask();
   position: relative;
   max-width: 480px;
   width: 100%;
-  background-color: rgb(221, 255, 227);
-  box-shadow: 0 5px 15px rgb(135, 201, 135);
+  background-color: rgb(233, 250, 236);
+  box-shadow: 0 5px 15px rgb(174, 212, 174);
   border-radius: 8px;
-  margin: 85px auto 0;
+  margin-top: 200px;
+  margin-right: auto;
+  margin-left: auto;
   padding: 25px;
   /* display: flex;
   flex-direction: column;
@@ -177,38 +185,24 @@ getTask();
   height: 64px;
   width: 100%;
 }
-.task-1 {
-  height: 15px;
-  width: 400px;
-}
-.input-field .task-1 {
-  height: 100%;
-  width: 100%;
-  outline: none;
-  border: 1px solid green;
-  padding: 18px 45px 18px 15px;
-  border-radius: 8px;
-}
 
 .container3 .todolist {
   margin-top: 20px;
 }
-.todolist .list {
+.todolist {
   list-style: none;
-  display: flex;
-  align-items: center;
-  padding: 20px 15px;
-  background-color: #cce7cc;
+}
+.todolist .list :hover {
+  background-color: #588157;
+}
+.todolist .list {
+  cursor: pointer;
   position: relative;
-}
-
-.todolist .list .task {
-  margin: 0 30px 0 15px;
-}
-
-.todolist .list input {
-  height: 16px;
-  width: 16px;
+  padding: 12px 8px 12px 40px;
+  list-style-type: none;
+  background: rgb(216, 240, 212);
+  font-size: 18px;
+  transition: 0.2s;
 }
 
 .in .background-blue {

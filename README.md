@@ -99,3 +99,14 @@ make a Task (some difficulty)
 . complete Task
 . Make a new Task
 . Delet Task
+
+# Friday 07-10-2022
+
+make function to create new Task
+function to delete Task
+Function to Complete Task
+
+# Next plan
+
+.Modify Task
+. Add cards to todolist

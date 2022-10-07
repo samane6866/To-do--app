@@ -2,20 +2,37 @@
   <div class="border-green">
     <p>{{ item.title }}</p>
     <p>{{ item.description }}</p>
-    <button>Completele</button>
-    <button>Modify</button>
-    <!-- <button @click="deleteTaskList(index)">Delete</button> -->
+    <div class="todo-btn">
+      <button class="Btn" @click="completeItem()">
+        {{ item.is_complete ? "unfineshed" : "complete" }}
+      </button>
+      <button class="Btn">Modify</button>
+      <button class="Btn" @click="deleteTaskItem()">Delete</button>
+      <p v-if="item.is_complete">It's completed!</p>
+    </div>
   </div>
 </template>
 
 <script setup>
-const props = defineProps(["Item"]);
+import { useTaskStore } from "../stores/task";
+import { ref, watch } from "vue";
+const props = defineProps(["item"]);
+
 // const emit = defineEmits([
 //   ENTER-EMITS-HERE
 // ])
+const emit = defineEmits(["refreshList"]);
 
-import { stringifyQuery } from "vue-router";
+async function deleteTaskItem() {
+  // Destrúyete a ti mismo
+  await useTaskStore().deleteOneItem(props.item.id);
+  emit("refreshList");
+}
 
+async function completeItem() {
+  await useTaskStore().completeItem(props.item.id, !props.item.is_complete);
+  emit("refreshList");
+}
 // const props = defineProps(["ENTER-PROP-HERE"]);
 
 // const props = defineProps([]);
@@ -26,6 +43,11 @@ import { stringifyQuery } from "vue-router";
   border: 2px green solid;
   margin: 5px;
   display: flex;
+  background-color: beige;
+}
+.Btn {
+  cursor: pointer;
+  width: 70px;
 }
 </style>
 
