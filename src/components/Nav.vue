@@ -1,7 +1,8 @@
 <template>
-  <div>
-    <div>Nav Component</div>
-    <button @click="signOut">iam here</button>
+  <div class="test-3">
+    <p class="nav-icon">Cucti Task🌵</p>
+
+    <button class="log-nav" @click="signOut">Log-out</button>
     <div v-if="errorMessageContiner">
       <p>{{ errorMessage }}</p>
     </div>
@@ -58,4 +59,41 @@ async function signOut() {
 // constant that saves the user email and cleans out the @client from the user
 </script>
 
-<style></style>
+<style scoped>
+.test-3 {
+  display: flex;
+  flex-direction: row;
+  align-content: flex-end;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.nav-icon {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+  font-size: 25px;
+  font-weight: bolder;
+
+  text-shadow: 3px 8px 5px #0000007a;
+}
+
+p::first-letter {
+  font-size: 200%;
+  color: #4caf50;
+}
+
+.log-nav {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>

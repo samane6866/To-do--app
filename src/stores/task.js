@@ -29,6 +29,13 @@ export const useTaskStore = defineStore("tasks", {
         .update({ is_complete: isComplete })
         .match({ id: itemId });
     },
+
+    async editItem(itemId, newTitel, newDescription) {
+      const { data, error } = await supabase
+        .from("tasks")
+        .update({ title: newTitel, description: newDescription })
+        .match({ id: itemId });
+    },
     // New code
     async addTask(title, description) {
       console.log(useUserStore().user.id);

@@ -19,7 +19,10 @@
           <div class="flip-card-back">
             <h1>My Trip to Thailand</h1>
             <ul class="li-item">
-              <li>sunglass</li>
+              <li>
+                <p>sunglass</p>
+                <button @click="add('Sunglasses')">✅</button>
+              </li>
               <li>camara</li>
               <li>bikini</li>
               <li>and...</li>
@@ -118,10 +121,6 @@
           @refreshList="getTask"
         />
       </section>
-      <div class="pending-tasks">
-        <span>You have<span>no</span>tasks pending.</span>
-        <button class="clear">Clear All</button>
-      </div>
     </div>
 
     <Footer />
@@ -150,6 +149,11 @@ async function addNewTask() {
   await useTaskStore().addTask(title.value, description.value);
   getTask();
 }
+//  la funcion de cards
+async function add(string) {
+  await useTaskStore().addTask(string, "");
+  getTask();
+}
 async function deleteOneItem(itemId) {
   const { data, error } = await supabase
     .from("items")
@@ -166,15 +170,23 @@ async function deleteOneItem(itemId) {
 <style scoped>
 .container3 {
   position: relative;
-  max-width: 480px;
+  max-width: 580px;
   width: 100%;
-  background-color: rgb(233, 250, 236);
-  box-shadow: 0 5px 15px rgb(174, 212, 174);
+  background-color: rgba(208, 243, 234, 0.607);
+  box-shadow: 0 5px 15px rgb(127, 225, 199);
   border-radius: 8px;
   margin-top: 200px;
   margin-right: auto;
   margin-left: auto;
   padding: 25px;
+  /* border: 10px solid transparent;
+  padding: 15px;
+  border-image: url(/cucti1.jpg) 15% round; */
+  /* background-image: url(/cucti1.jpg);
+  background-position: right bottom, left top;
+  background-repeat: no-repeat, repeat;
+  background-size: cover; */
+
   /* display: flex;
   flex-direction: column;
   align-items: center;
@@ -185,7 +197,25 @@ async function deleteOneItem(itemId) {
   height: 64px;
   width: 100%;
 }
-
+.input-field {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: space-around;
+}
+.task-2 {
+  width: 400px;
+  height: 30px;
+  margin-top: 10px;
+  background-color: azure;
+}
+.task-1 {
+  width: 400px;
+  height: 30px;
+  margin-top: 20px;
+  background-color: azure;
+}
 .container3 .todolist {
   margin-top: 20px;
 }
@@ -200,7 +230,7 @@ async function deleteOneItem(itemId) {
   position: relative;
   padding: 12px 8px 12px 40px;
   list-style-type: none;
-  background: rgb(216, 240, 212);
+  background: rgb(226, 236, 225);
   font-size: 18px;
   transition: 0.2s;
 }
