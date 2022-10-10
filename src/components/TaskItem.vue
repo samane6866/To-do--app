@@ -1,6 +1,6 @@
 <template>
   <div class="border-green">
-    <p>{{ item.title }}</p>
+    <h1>{{ item.title }}</h1>
     <p>{{ item.description }}</p>
 
     <div class="edit-form" v-if="showForm">
@@ -81,17 +81,19 @@ async function editItem() {
 
 <style>
 .border-green {
-  /* border: 1px green solid; */
-  /* margin: 20px; */
+  border: 1px
+    radial-gradient(circle at 56%, rgb(43, 47, 4) 0%, rgb(217, 244, 154) 99%);
+  border: 2px;
   display: flex;
-  /* border-radius: 99px; */
-  /* background: radial-gradient(
-    circle at 56%,
-    rgb(233, 236, 205) 0%,
-    rgb(217, 244, 154) 99%
-  ); */
-
-  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  height: auto;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 50px;
+  background: radial-gradient(circle at 56%, #dfffd6 0%, #2d6a4f 99%);
+  gap: 0.5rem;
 }
 
 .Btn {
@@ -109,6 +111,7 @@ async function editItem() {
   margin-left: 30px;
   padding-left: 50px;
   align-items: center;
+  margin-right: 50px;
 }
 .delete-icon {
   width: 25px;
@@ -136,7 +139,7 @@ async function editItem() {
   width: 200px;
   height: 50px;
   margin-bottom: 5px;
-  background-color: #d00000;
+  background-color: #b2e8d4;
   border-radius: 10px;
 }
 </style>

@@ -110,3 +110,15 @@ Function to Complete Task
 
 .Modify Task
 . Add cards to todolist
+
+# Monday 10-10-2022
+
+.function modify task,done
+.function cards and add them to list
+.css new task
+
+# Next plan
+
+- compelete delete function for cards
+  -css task
+  -css responsive

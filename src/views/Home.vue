@@ -23,9 +23,15 @@
                 <p>sunglass</p>
                 <button @click="add('Sunglasses')">✅</button>
               </li>
-              <li>camara</li>
-              <li>bikini</li>
-              <li>and...</li>
+              <li>
+                <p>camara</p>
+              </li>
+              <li>
+                <p>bikini</p>
+              </li>
+              <li>
+                <p>book</p>
+              </li>
             </ul>
           </div>
         </div>
@@ -113,15 +119,17 @@
           <i class="trash"></i>
         </li>
       </ul> -->
-      <section class="taskList">
-        <p>Aquí irán las tareas</p>
-        <TaskItem
-          v-for="task in taskList"
-          :key="task.id"
-          :item="task"
-          @refreshList="getTask"
-        />
-      </section>
+      <div class="task-container">
+        <section class="taskList">
+          <p>Aquí irán las tareas</p>
+          <TaskItem
+            v-for="task in taskList"
+            :key="task.id"
+            :item="task"
+            @refreshList="getTask"
+          />
+        </section>
+      </div>
     </div>
 
     <Footer />
@@ -169,30 +177,30 @@ async function deleteOneItem(itemId) {
 </script>
 
 <style scoped>
-.container3 {
+/* .container3 {
   position: relative;
   width: 580px;
   /* width: 100%; */
-  background-color: #bfebcb;
+/* background-color: #bfebcb;
   box-shadow: 0 5px 15px rgb(119, 165, 152);
   border-radius: 8px;
   margin-top: 200px;
   margin-right: auto;
   margin-left: auto;
-  padding: 25px;
-  /* border: 10px solid transparent;
+  /* padding: 25px; */
+/* border: 10px solid transparent;
   padding: 15px;
   border-image: url(/cucti1.jpg) 15% round; */
-  /* background-image: url(/cucti1.jpg);
+/* background-image: url(/cucti1.jpg);
   background-position: right bottom, left top;
   background-repeat: no-repeat, repeat;
   background-size: cover; */
 
-  /* display: flex;
+/* display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 200px; */
-}
+
 .container3 .input-field {
   position: relative;
   height: 64px;
@@ -210,17 +218,27 @@ font .input-field {
   align-items: center;
   align-content: space-around;
 }
+.input-field {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
 .task-2 {
   width: 400px;
   height: 30px;
   margin-top: 10px;
-  background-color: azure;
+  background-color: #f6fff8;
+  border-radius: 10px;
 }
 .task-1 {
   width: 400px;
   height: 30px;
   margin-top: 20px;
-  background-color: azure;
+  background-color: #dfffd6;
+  border-radius: 10px;
 }
 .container3 .todolist {
   margin-top: 20px;
@@ -322,6 +340,33 @@ font .input-field {
 .li-item {
   text-align: center;
   font-size: 20px;
+}
+
+.task-list {
+  background-color: rgb(248, 248, 240);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  max-width: 100%;
+
+  align-content: center;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 25px;
+  position: relative;
+  width: 100%;
+  border: 10px solid transparent;
+  padding: 15px;
+  background-color: #bfebcb;
+  box-shadow: 0 5px 15px rgb(119, 165, 152);
+  border-radius: 8px;
+}
+.task-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* .input {
