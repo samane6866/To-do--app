@@ -11,7 +11,7 @@
         <div class="flip-card-inner">
           <div class="flip-card-front">
             <img
-              src="tripp.jpg"
+              src="https://res.cloudinary.com/dlzo8wao1/image/upload/v1665419359/todo-img/tripp_btcw0t.jpg "
               alt="trip"
               style="width: 300px; height: 300px"
             />
@@ -35,7 +35,7 @@
         <div class="flip-card-inner">
           <div class="flip-card-front">
             <img
-              src="../../public/shopping.jpg"
+              src="https://res.cloudinary.com/dlzo8wao1/image/upload/v1665419326/todo-img/fitness4_kgmhnd.jpg "
               alt="shoping"
               style="width: 300px; height: 300px"
             />
@@ -56,7 +56,7 @@
         <div class="flip-card-inner">
           <div class="flip-card-front">
             <img
-              src="fitness4.jpg"
+              src="https://res.cloudinary.com/dlzo8wao1/image/upload/v1665419326/todo-img/fitness4_kgmhnd.jpg "
               alt="gym"
               style="width: 300px; height: 300px"
             />
