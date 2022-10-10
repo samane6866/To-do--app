@@ -2,7 +2,11 @@
   <div class="container">
     <div class="footer">
       <div class="icon">
-        <img class="cucti-icon" src="images.png" alt="cactus" />
+        <img
+          class="cucti-icon"
+          src="https://res.cloudinary.com/dlzo8wao1/image/upload/v1665419337/todo-img/images_v5zha9.png"
+          alt="cactus"
+        />
         <h2>Cucti Task</h2>
       </div>
     </div>
