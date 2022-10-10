@@ -44,7 +44,10 @@
           </p>
         </form>
       </div>
-      <img src="../../public/todo.jpg" alt="" />
+      <img
+        src=" https://res.cloudinary.com/dlzo8wao1/image/upload/v1665419356/todo-img/todo_feol6b.jpg "
+        alt=""
+      />
     </div>
   </div>
 </template>

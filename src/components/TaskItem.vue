@@ -3,26 +3,34 @@
     <p>{{ item.title }}</p>
     <p>{{ item.description }}</p>
 
-    <div v-if="showForm">
-      <input v-model="newtitle" type="text" />
-      <input v-model="newdescription" />
-      <button @click="editItem">save change</button>
+    <div class="edit-form" v-if="showForm">
+      <input v-model="newtitle" type="text" class="form1" />
+      <input v-model="newdescription" type="text" class="form2" />
+      <button @click="editItem"></button>
     </div>
 
     <div class="todo-btn">
-      <button class="Btn" @click="completeItem()">
-        {{ item.is_complete ? "unfineshed" : "complete" }}
+      <button class="Btn c-btn" @click="completeItem()">
+        {{ item.is_complete ? "⌛" : "✅" }}
       </button>
 
-      <button class="Btn edit-btn" @click="showForm = !showForm">edit</button>
+      <img
+        class="Btn edit-btn"
+        @click="showForm = !showForm"
+        src="https://res.cloudinary.com/dlzo8wao1/image/upload/v1665419316/todo-img/edit_s4ac74.png "
+        alt=""
+      />
 
       <img
         class="Btn delete-icon"
         @click="deleteTaskItem()"
-        src="../../public/delete.png"
+        src=" https://res.cloudinary.com/dlzo8wao1/image/upload/v1665419314/todo-img/delete_e2cru5.png"
       />
       <p v-if="item.is_complete">
-        <img src="../../public/tasks.png" alt="" />You did it
+        <img
+          src="https://res.cloudinary.com/dlzo8wao1/image/upload/v1665419345/todo-img/tasks_lzxmic.png"
+          alt=""
+        />You did it
       </p>
     </div>
   </div>
@@ -82,10 +90,7 @@ async function editItem() {
     rgb(233, 236, 205) 0%,
     rgb(217, 244, 154) 99%
   ); */
-  border: 10px solid transparent;
-  padding: 15px;
-  border-image: url(/border2.jpg) 5% stretch;
-  margin: 10px;
+
   gap: 1rem;
 }
 
@@ -93,10 +98,17 @@ async function editItem() {
   cursor: pointer;
   width: 70px;
 }
+.c-btn {
+  width: 35px;
+  height: 25px;
+  background-color: #dde5b6;
+}
 .todo-btn {
   display: flex;
-  flex-direction: column;
-  margin-left: 300px;
+  flex-direction: row;
+  margin-left: 30px;
+  padding-left: 50px;
+  align-items: center;
 }
 .delete-icon {
   width: 25px;
@@ -104,7 +116,28 @@ async function editItem() {
 }
 
 .edit-btn {
-  width: 58px;
+  width: 38px;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 200px;
+}
+
+.form1 {
+  width: 200px;
+  height: 50px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+}
+.form2 {
+  width: 200px;
+  height: 50px;
+  margin-bottom: 5px;
+  background-color: #d00000;
+  border-radius: 10px;
 }
 </style>
 

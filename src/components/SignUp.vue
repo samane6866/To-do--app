@@ -58,7 +58,11 @@
         </div>
       </div>
       <div class="test2">
-        <img class="main-img" src="../../public/log1.webp" alt="todolist" />
+        <img
+          class="main-img"
+          src=" https://res.cloudinary.com/dlzo8wao1/image/upload/v1665419333/todo-img/log1_dsirpm.webp "
+          alt="todolist"
+        />
       </div>
     </div>
   </div>
