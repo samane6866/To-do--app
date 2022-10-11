@@ -8,8 +8,13 @@
           {{ errorMsg }}
         </p>
         <form @submit.prevent="signIn" class="form-1">
-          <h1>Sign In</h1>
-          <label class="" for="">Email</label>
+          <div class="login-txt">
+            <h3>Sign In to CuctiTask</h3>
+            <P>Start organizing your tasks today!</P>
+          </div>
+          <div class="label-email">
+            <label class="label-email1" for="">Email</label>
+          </div>
           <input
             class="input-email"
             type="email"
@@ -18,16 +23,18 @@
             id="email"
           />
 
-          <label class="" for="">Password</label>
+          <div class="label-email">
+            <label class="label-email1" for="">Password</label>
+          </div>
           <input
-            class=""
+            class="input-email"
             :type="passwordFieldType"
             onpaste="return false"
             placeholder="************"
             v-model="password"
             id="password"
           />
-          <span class="">
+          <span class="eye-icon">
             <EyeIcon
               :class="[passwordFieldIcon]"
               @click.prevent="hidePassword = !hidePassword"
@@ -117,25 +124,51 @@ const signIn = async () => {
   background-color: rgb(247, 247, 246);
 }
 
+.login-txt {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 40px;
+}
+.login-txt h3 {
+  font-size: 26px;
+  margin-bottom: 0;
+  color: #2d6a4f;
+}
+.login-txt p {
+  font-size: 14px;
+  color: #588157;
+}
+
+.label-email {
+  padding-bottom: 15px;
+}
+.label-email1 {
+  font-size: 18px;
+  font-weight: 300;
+}
+
 .input-email {
   width: 100%;
-  padding: 10px;
+  padding: 15px;
   margin: 5px 0 22px 0;
   display: inline-block;
   border: none;
 
   background: #f1f1f1;
 
-  border: double 3px transparent;
+  border: double 2px transparent;
 
   background-image: linear-gradient(white, white),
     linear-gradient(to right, rgb(100, 165, 118), rgb(202, 230, 143));
   background-origin: border-box;
   background-clip: padding-box, border-box;
-  border-radius: 999px;
+  border-radius: 6px;
 
-  box-shadow: inset 0 0 0 3px #fff, 0 0 0 4px #fff, 1px -3px 20px #75e292,
-    -3px 3px 30px #1f5741;
+  box-shadow: inset 0 0 0 2px #fff, 0 0 0 4px #fff, 1px -3px 20px #75e292,
+    -3px 3px 20px #216b4d;
 }
 
 .input-email :focus {
@@ -149,7 +182,10 @@ input[type="password"] {
   margin: 5px 0 22px 0;
   display: inline-block;
   border: none;
-  background: #f1f1f1;
+  /* background: #f1f1f1; */
+  border: double 2px transparent;
+  background-image: linear-gradient(white, white),
+    linear-gradient(to right, rgb(100, 165, 118), rgb(202, 230, 143));
 }
 input[type="text"]:focus,
 input[type="password"]:focus {
@@ -160,12 +196,13 @@ button {
   background-color: #2d6a4f;
   color: white;
   padding: 14px 20px;
-  margin: 8px 0;
+  margin: 8px 0 22px 0;
   border: none;
   cursor: pointer;
   width: 100%;
   opacity: 0.9;
-  margin-left: 5px;
+  margin-left: 15px;
+  border-radius: 6px;
 }
 
 #body2 {

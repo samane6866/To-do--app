@@ -123,8 +123,8 @@
         </li>
       </ul> -->
       <div class="task-container">
+        <p>Aquí irán las tareas</p>
         <section class="taskList">
-          <p>Aquí irán las tareas</p>
           <TaskItem
             v-for="task in taskList"
             :key="task.id"
@@ -343,6 +343,11 @@ font .input-field {
 .li-item {
   text-align: center;
   font-size: 20px;
+}
+
+.taskList {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .task-list {
