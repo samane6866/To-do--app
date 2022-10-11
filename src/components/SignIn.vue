@@ -44,7 +44,7 @@
           <div class="clear">
             <button class="" type="submit">Sign In</button>
           </div>
-          <p class="">
+          <p class="log-link">
             <span class="">Don’t have an account? </span>
 
             <PersonalRouter :route="route" :buttonText="buttonText" />
@@ -52,8 +52,9 @@
         </form>
       </div>
       <img
+        class="task-img"
         src="https://res.cloudinary.com/dlzo8wao1/image/upload/v1665419356/todo-img/todo_feol6b.jpg"
-        alt=""
+        alt="task.img"
       />
     </div>
   </div>
@@ -69,7 +70,7 @@ import { storeToRefs } from "pinia";
 
 // Route Variables
 const route = "/auth/sign-up";
-const buttonText = "Test the Sign Up Route";
+const buttonText = "Sign Up";
 
 // Input Fields
 const email = ref("");
@@ -106,6 +107,25 @@ const signIn = async () => {
 </script>
 
 <style scoped>
+@media only screen and (min-width: 320px) and (max-width: 736px) {
+  .task-img {
+    width: 180px;
+    height: 150px;
+  }
+  .main-log {
+    width: 50px;
+    height: 868px;
+  }
+  .form-1 {
+    width: 150px;
+    height: 400px;
+    margin-top: 150px;
+  }
+  /* .input-email {
+    width: 100%;
+  } */
+}
+
 .main-log {
   display: flex;
   flex-direction: column;
@@ -167,7 +187,7 @@ const signIn = async () => {
   background-clip: padding-box, border-box;
   border-radius: 6px;
 
-  box-shadow: inset 0 0 0 2px #fff, 0 0 0 4px #fff, 1px -3px 20px #75e292,
+  box-shadow: inset 0 0 0 2px #fff, 0 0 0 4px #fff, 1px -3px 10px #75e292,
     -3px 3px 20px #216b4d;
 }
 
@@ -204,7 +224,17 @@ button {
   margin-left: 15px;
   border-radius: 6px;
 }
-
+.log-link {
+  text-align: center;
+  margin-left: 24px;
+  font-size: 15px;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+}
 #body2 {
   padding-top: 100px;
   margin-bottom: 100px;
