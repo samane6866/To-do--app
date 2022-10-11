@@ -10,7 +10,7 @@
             <p>Please fill in this form to creat an account.</p>
             <hr />
 
-            <label class="" for="email">Email</label>
+            <label class="label-email1" for="email">Email</label>
             <input
               class="input-email"
               type="email"
@@ -19,7 +19,7 @@
               id="email"
             />
 
-            <label class="" for="psw">Password</label>
+            <label class="label-email1" for="psw">Password</label>
             <input
               class=""
               type="password"
@@ -28,31 +28,23 @@
               id="password"
             />
 
-            <label class="" for="psw-confirm">confirmPassword</label>
+            <label class="label-email1" for="psw-confirm"
+              >Confirm Password</label
+            >
             <input
               class=""
               type="password"
               placeholder="confirm Password"
-              v-model="confirmPassword"
+              v-model="ConfirmPassword"
               id="confirmPassword"
             />
-            <label>
-              <input
-                type="checkbox"
-                checked="checked"
-                name="remmber"
-              />Rembember me
-            </label>
-            <p>
-              By creating an account you agree to our
-              <a href="#" style="color: #2d6a4f">Terms & Privacy</a>.
-            </p>
 
             <div class="clear">
               <button class="signupbtn" type="submit">Sign Up</button>
             </div>
-            <p class="">
+            <p class="route-login">
               <span class="">Have an account? </span>
+              <PersonalRouter :route="route" :buttonText="buttonText" />
             </p>
           </form>
         </div>
@@ -60,8 +52,7 @@
       <div class="test2">
         <img
           class="main-img"
-          src="https://res.cloudinary.com/dlzo8wao1/image/upload/v1665474898/todo-img/log1_rbaydj.png"
-          alt="todolist"
+          src="https://res.cloudinary.com/dlzo8wao1/image/upload/v1665519269/todo-img/try3_f6nxo7.png"
         />
       </div>
     </div>
@@ -75,7 +66,7 @@ import PersonalRouter from "./PersonalRouter.vue";
 import { useUserStore } from "../stores/user";
 // Route Variables
 const route = "/auth/login";
-const buttonText = "Test the Sign In Route";
+const buttonText = "Sign In";
 // Input Fields
 const email = ref(null);
 const password = ref(null);
@@ -114,6 +105,9 @@ function to SignUp user to supaBase with a timeOut() method for showing the
 error
 
 <style scoped>
+@media only screen and (min-width: 320px) and (max-width: 736px) {
+}
+
 .main-log {
   display: flex;
   flex-direction: column;
@@ -132,12 +126,14 @@ error
 }
 .input-email {
   width: 100%;
-  padding: 25px;
+  padding: 10px;
   margin: 5px 0 22px 0;
   display: inline-block;
   border: none;
-
   background: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: inset 0 0 0 2px #fff, 0 0 0 4px #fff, 1px -3px 5px #9ca861,
+    -3px 3px 10px #5ea260;
 }
 
 .input-email :focus {
@@ -147,11 +143,15 @@ error
 input[type="text"],
 input[type="password"] {
   width: 100%;
-  padding: 25px;
+  padding: 10px;
   margin: 5px 0 22px 0;
   display: inline-block;
   border: none;
   background: #f1f1f1;
+  border-radius: 3px;
+
+  box-shadow: inset 0 0 0 2px #fff, 0 0 0 4px #fff, 1px -3px 5px #9ca861,
+    -3px 3px 10px #5ea260;
 }
 input[type="text"]:focus,
 input[type="password"]:focus {
@@ -159,27 +159,38 @@ input[type="password"]:focus {
   outline: none;
 }
 hr {
-  border: 1px solid #f1f1f1;
+  border: 1px solid #92b98c;
   margin-bottom: 25px;
 }
 button {
   background-color: #2d6a4f;
+  width: 100%;
   color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
+  padding: 10px 20px;
+  margin: 8px 0 22px 0;
   border: none;
   cursor: pointer;
   width: 100%;
   opacity: 0.9;
-  margin-left: 5px;
+  margin-left: 12px;
+  border-radius: 6px;
+}
+.label-email1 {
+  font-size: 15px;
+  font-weight: 300;
+}
+.route-login {
+  text-align: center;
 }
 #body {
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top: 200px;
+  margin-bottom: 10px;
+  margin-left: 0px;
 
-  width: 700px;
+  width: 1300px;
+  height: 100%;
 }
 .main-img {
-  margin-left: 300px;
+  margin-left: 150px;
 }
 </style>

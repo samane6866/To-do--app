@@ -122,3 +122,12 @@ Function to Complete Task
 - compelete delete function for cards
   -css task
   -css responsive
+
+# Tuesday 10-10-2022
+
+.Deploy project
+.css responsive sign-in and sign-out
+
+# Next plan
+
+. responsive homepage

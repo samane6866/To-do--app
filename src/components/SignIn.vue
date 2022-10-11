@@ -45,17 +45,19 @@
             <button class="" type="submit">Sign In</button>
           </div>
           <p class="log-link">
-            <span class="">Don’t have an account? </span>
+            <span class="">Don’t have an account?</span>
 
             <PersonalRouter :route="route" :buttonText="buttonText" />
           </p>
         </form>
       </div>
-      <img
-        class="task-img"
-        src="https://res.cloudinary.com/dlzo8wao1/image/upload/v1665419356/todo-img/todo_feol6b.jpg"
-        alt="task.img"
-      />
+      <div class="img-container">
+        <img
+          class="task-img"
+          src="https://res.cloudinary.com/dlzo8wao1/image/upload/v1665419356/todo-img/todo_feol6b.jpg"
+          alt="task.img"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -109,21 +111,21 @@ const signIn = async () => {
 <style scoped>
 @media only screen and (min-width: 320px) and (max-width: 736px) {
   .task-img {
-    width: 180px;
-    height: 170px;
+    width: 150px;
+  }
+  .img-container {
+    margin-bottom: 500px;
   }
   .main-log {
-    width: 50px;
-    height: 868px;
+    width: 80px;
+    height: 708px;
   }
   .form-1 {
     width: 150px;
     height: 400px;
-    margin-top: 150px;
     margin-left: 10px;
   }
-  .login-txt {
-  }
+
   .container {
     margin-right: 10px;
     margin-left: 0px;
@@ -150,8 +152,14 @@ const signIn = async () => {
 .container {
   display: flex;
   background-color: rgb(247, 247, 246);
+  flex-direction: row;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
 }
-
+.task-img {
+  height: 100%;
+}
 .login-txt {
   display: flex;
   flex-direction: column;
@@ -164,6 +172,7 @@ const signIn = async () => {
   font-size: 26px;
   margin-bottom: 0;
   color: #2d6a4f;
+  font-weight: bold;
 }
 .login-txt p {
   font-size: 14px;
@@ -171,32 +180,33 @@ const signIn = async () => {
 }
 
 .label-email {
-  padding-bottom: 15px;
+  padding-bottom: 10px;
 }
 .label-email1 {
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 300;
 }
 
 .input-email {
   width: 100%;
-  padding: 15px;
+  padding: 10px;
   margin: 5px 0 22px 0;
   display: inline-block;
   border: none;
 
   background: #f1f1f1;
 
-  border: double 2px transparent;
+  /* border: double 2px transparent; */
 
-  background-image: linear-gradient(white, white),
+  /* background-image: linear-gradient(white, white),
     linear-gradient(to right, rgb(100, 165, 118), rgb(202, 230, 143));
   background-origin: border-box;
   background-clip: padding-box, border-box;
-  border-radius: 6px;
+   */
 
-  box-shadow: inset 0 0 0 2px #fff, 0 0 0 4px #fff, 1px -3px 10px #75e292,
-    -3px 3px 20px #216b4d;
+  box-shadow: inset 0 0 0 2px #fff, 0 0 0 4px #fff, 1px -3px 5px #9ca861,
+    -3px 3px 10px #5ea260;
+  border-radius: 5px;
 }
 
 .input-email :focus {
@@ -206,14 +216,14 @@ const signIn = async () => {
 input[type="text"],
 input[type="password"] {
   width: 100%;
-  padding: 15px;
+  padding: 10px;
   margin: 5px 0 22px 0;
   display: inline-block;
   border: none;
   /* background: #f1f1f1; */
-  border: double 2px transparent;
+  /* border: double 2px transparent;
   background-image: linear-gradient(white, white),
-    linear-gradient(to right, rgb(100, 165, 118), rgb(202, 230, 143));
+    linear-gradient(to right, rgb(100, 165, 118), rgb(202, 230, 143)); */
 }
 input[type="text"]:focus,
 input[type="password"]:focus {
@@ -223,14 +233,14 @@ input[type="password"]:focus {
 button {
   background-color: #2d6a4f;
   color: white;
-  padding: 14px 20px;
-  margin: 8px 0 22px 0;
+  padding: 10px;
+  margin: 8px 0 10px 0;
   border: none;
   cursor: pointer;
   width: 100%;
   opacity: 0.9;
-  margin-left: 15px;
-  border-radius: 6px;
+  margin-left: 12px;
+  border-radius: 5px;
 }
 .log-link {
   text-align: center;
