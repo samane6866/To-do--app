@@ -110,7 +110,7 @@ const signIn = async () => {
 @media only screen and (min-width: 320px) and (max-width: 736px) {
   .task-img {
     width: 180px;
-    height: 150px;
+    height: 170px;
   }
   .main-log {
     width: 50px;
@@ -120,7 +120,15 @@ const signIn = async () => {
     width: 150px;
     height: 400px;
     margin-top: 150px;
+    margin-left: 10px;
   }
+  .login-txt {
+  }
+  .container {
+    margin-right: 10px;
+    margin-left: 0px;
+  }
+
   /* .input-email {
     width: 100%;
   } */
@@ -132,7 +140,7 @@ const signIn = async () => {
   justify-content: space-evenly;
 }
 .form-1 {
-  margin-left: 120px;
+  margin-left: 20px;
   margin-right: 120px;
   width: 250px;
   height: 800px;
@@ -236,7 +244,7 @@ button {
   font-weight: 400;
 }
 #body2 {
-  padding-top: 100px;
-  margin-bottom: 100px;
+  padding-top: 20px;
+  margin-bottom: 20px;
 }
 </style>
