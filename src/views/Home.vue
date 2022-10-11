@@ -25,12 +25,15 @@
               </li>
               <li>
                 <p>camara</p>
+                <button @click="add('camara')">✅</button>
               </li>
               <li>
                 <p>bikini</p>
+                <button @click="add('bikini')">✅</button>
               </li>
               <li>
                 <p>book</p>
+                <button @click="add('book')">✅</button>
               </li>
             </ul>
           </div>
@@ -41,7 +44,7 @@
         <div class="flip-card-inner">
           <div class="flip-card-front">
             <img
-              src="https://res.cloudinary.com/dlzo8wao1/image/upload/v1665419326/todo-img/fitness4_kgmhnd.jpg "
+              src="https://res.cloudinary.com/dlzo8wao1/image/upload/v1665419344/todo-img/shopping_yfqxzv.jpg "
               alt="shoping"
               style="width: 300px; height: 300px"
             />
