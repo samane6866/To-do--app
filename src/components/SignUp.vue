@@ -60,7 +60,7 @@
       <div class="test2">
         <img
           class="main-img"
-          src="https://res.cloudinary.com/dlzo8wao1/image/upload/v1665419333/todo-img/log1_dsirpm.webp"
+          src="https://res.cloudinary.com/dlzo8wao1/image/upload/v1665474898/todo-img/log1_rbaydj.png"
           alt="todolist"
         />
       </div>
