@@ -24,7 +24,7 @@
       <img
         class="Btn delete-icon"
         @click="deleteTaskItem()"
-        src=" https://res.cloudinary.com/dlzo8wao1/image/upload/v1665419314/todo-img/delete_e2cru5.png"
+        src="https://res.cloudinary.com/dlzo8wao1/image/upload/v1665419314/todo-img/delete.png"
       />
       <p v-if="item.is_complete">
         <img

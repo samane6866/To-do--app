@@ -44,7 +44,7 @@
         <div class="flip-card-inner">
           <div class="flip-card-front">
             <img
-              src="https://res.cloudinary.com/dlzo8wao1/image/upload/v1665419344/todo-img/shopping_yfqxzv.jpg "
+              src="https://res.cloudinary.com/dlzo8wao1/image/upload/v1665419344/todo-img/shopping_yfqxzv.jpg"
               alt="shoping"
               style="width: 300px; height: 300px"
             />
@@ -65,7 +65,7 @@
         <div class="flip-card-inner">
           <div class="flip-card-front">
             <img
-              src="https://res.cloudinary.com/dlzo8wao1/image/upload/v1665419326/todo-img/fitness4_kgmhnd.jpg "
+              src="https://res.cloudinary.com/dlzo8wao1/image/upload/v1665419326/todo-img/fitness4_kgmhnd.jpg"
               alt="gym"
               style="width: 300px; height: 300px"
             />
@@ -240,7 +240,7 @@ font .input-field {
   width: 400px;
   height: 30px;
   margin-top: 20px;
-  background-color: #dfffd6;
+  background-color: #f6fff8;
   border-radius: 10px;
 }
 .container3 .todolist {
