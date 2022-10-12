@@ -1,6 +1,6 @@
 <template>
   <div class="border-green">
-    <h1>{{ item.title }}</h1>
+    <h3>{{ item.title }}</h3>
     <p>{{ item.description }}</p>
 
     <div class="edit-form" v-if="showForm">
@@ -28,7 +28,8 @@
       />
       <p v-if="item.is_complete">
         <img
-          src="https://res.cloudinary.com/dlzo8wao1/image/upload/v1665419345/todo-img/tasks_lzxmic.png"
+          class="icon-done"
+          src="https://res.cloudinary.com/dlzo8wao1/image/upload/v1665596782/todo-img/done_vvtaqh.png"
           alt=""
         />You did it
       </p>
@@ -89,11 +90,14 @@ async function editItem() {
   align-items: center;
   width: 300px;
   height: auto;
-  margin: 20px;
-  padding: 20px;
-  border-radius: 50px;
-  background: radial-gradient(circle at 56%, #dfffd6 0%, #2d6a4f 99%);
-  gap: 0.5rem;
+  margin: 15px;
+  /* padding: 20px; */
+  border-radius: 6px;
+  /* background: radial-gradient(circle at 56%, #dfffd6 0%, #2d6a4f 99%);
+  gap: 0.5rem; */
+  box-shadow: inset 0 0 0 2px #fff, 0 0 0 4px #fff, 1px -3px 5px #9ca861,
+    -3px 3px 10px #5ea260;
+  border-radius: 5px;
 }
 
 .Btn {
@@ -128,19 +132,22 @@ async function editItem() {
   align-items: center;
   height: 200px;
 }
+.icon-done {
+  width: 50px;
+}
 
 .form1 {
   width: 200px;
   height: 50px;
   margin-bottom: 5px;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 .form2 {
   width: 200px;
   height: 50px;
   margin-bottom: 5px;
-  background-color: #b2e8d4;
-  border-radius: 10px;
+  background-color: #faffef;
+  border-radius: 5px;
 }
 </style>
 

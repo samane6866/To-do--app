@@ -3,10 +3,17 @@
     <Nav />
     <div class="main-titel">
       <h1>Manage all your daily Task</h1>
-      <h3>Dont forget to add...</h3>
+      <div class="first-pic">
+        <img
+          class="pic-task"
+          src="https://res.cloudinary.com/dlzo8wao1/image/upload/v1665589480/todo-img/list_cvw1ua.png"
+          alt=""
+        />
+      </div>
+      <!-- <h3>Dont forget to add...</h3> -->
     </div>
 
-    <div class="cards">
+    <!-- <div class="cards">
       <div class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front">
@@ -81,10 +88,14 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <div class="container3">
-      <h2>A new great day.</h2>
+      <div class="text-container">
+        <h2>A new great day.</h2>
+        <h6>Become focused and organized with CuctiTask</h6>
+        <h4>Add a new task</h4>
+      </div>
       <div class="input-field">
         <span>
           <input
@@ -204,15 +215,37 @@ async function deleteOneItem(itemId) {
   align-items: center;
   margin-top: 200px; */
 
+@media only screen and (min-width: 320px) and (max-width: 736px) {
+}
+
 .container3 .input-field {
-  position: relative;
+  /* position: relative; */
   height: 64px;
   width: 100%;
 }
-.container3 h2 {
-  font-size: 25px;
+.text-container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
   text-align: center;
   margin-bottom: 50px;
+}
+.text-container h2 {
+  font-weight: 600;
+}
+.text-container h4 {
+  font-weight: 400;
+  margin-top: -20px;
+}
+.text-container h6 {
+  font-weight: 400;
+  margin-top: -25px;
+}
+.pic-task {
+  width: 500px;
 }
 font .input-field {
   display: flex;
@@ -230,18 +263,36 @@ font .input-field {
   margin-top: 100px;
 }
 .task-2 {
-  width: 400px;
-  height: 30px;
-  margin-top: 10px;
-  background-color: #f6fff8;
-  border-radius: 10px;
-}
-.task-1 {
-  width: 400px;
+  width: 600px;
   height: 30px;
   margin-top: 20px;
   background-color: #f6fff8;
-  border-radius: 10px;
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: inset 0 0 0 2px #fff, 0 0 0 4px #fff, 1px -3px 5px #9ca861,
+    -3px 3px 10px #5ea260;
+}
+.task-1 {
+  width: 600px;
+  height: 30px;
+  margin-top: 20px;
+  background-color: #bce1c4;
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: inset 0 0 0 2px #fff, 0 0 0 4px #fff, 1px -3px 5px #9ca861,
+    -3px 3px 10px #5ea260;
+}
+.Btn-block {
+  background-color: #2d6a4f;
+  color: white;
+  padding: 12px;
+  margin: 25px 0 35px 0;
+  border: none;
+  cursor: pointer;
+  width: 300px;
+  opacity: 0.9;
+  margin-left: 12px;
+  border-radius: 5px;
 }
 .container3 .todolist {
   margin-top: 20px;

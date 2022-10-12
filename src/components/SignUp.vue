@@ -130,7 +130,7 @@ error
   }
   .txt-container h1 {
     margin-left: -10px;
-    margin-top: -30px;
+    margin-top: -39px;
   }
   .txt-container h3 {
     font-size: 10px;

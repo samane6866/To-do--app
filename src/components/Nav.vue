@@ -60,6 +60,20 @@ async function signOut() {
 </script>
 
 <style scoped>
+@media only screen and (min-width: 320px) and (max-width: 736px) {
+  .test-3 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-icon {
+    font-size: 18px;
+  }
+  p::first-letter {
+    font-size: 100%;
+  }
+}
+
 .test-3 {
   display: flex;
   flex-direction: row;

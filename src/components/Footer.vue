@@ -2,13 +2,16 @@
   <div class="container">
     <div class="footer">
       <div class="icon">
-        <img
+        <!-- <img
           class="cucti-icon"
           src="https://res.cloudinary.com/dlzo8wao1/image/upload/v1665419337/todo-img/images_v5zha9.png"
           alt="cactus"
-        />
-        <h2>Cucti Task</h2>
+        /> -->
+        <h2>CuctiTask🌵</h2>
+
+        <hr />
       </div>
+      <p>© 2022 TaskApp. All rights reserved. Built with ❤️ by Samaneh</p>
     </div>
   </div>
 </template>
@@ -25,6 +28,9 @@
   margin: auto;
   background-color: #f4f3ee;
 }
+.footer p {
+  text-align: center;
+}
 .icon {
   display: flex;
   flex-direction: column-reverse;
@@ -32,9 +38,13 @@
   align-items: center;
 }
 .icon h2 {
-  font-family: sans-serif;
-  font-size: 45px;
-  color: #2d6a4f;
+  font-size: 25px;
+  /* color: #2d6a4f; */
   font-weight: bold;
+  text-shadow: 3px 8px 5px #0000007a;
+}
+h2::first-letter {
+  font-size: 200%;
+  color: #4caf50;
 }
 </style>
