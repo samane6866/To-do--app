@@ -7,7 +7,7 @@
           <div class="txt-container">
             <h1>Register to CuctiTask</h1>
             <h3>Orgnize your life,finally.</h3>
-            <h5>Become focused,organized,and calm with CuctiTask!</h5>
+            <!-- <h5>Become focused and organized with CuctiTask!</h5> -->
           </div>
 
           <form @submit.prevent="signUp" class="form-1">
@@ -111,19 +111,48 @@ error
 
 <style scoped>
 @media only screen and (min-width: 320px) and (max-width: 736px) {
+  #body {
+    margin-top: 50px;
+  }
+
+  .main-log {
+    width: 95px;
+    height: 750px;
+  }
+
   .form-1 {
     width: 250px;
-    margin-left: 80px;
+    margin-left: 10px;
   }
   .txt-container {
     margin-left: 50px;
-    margin-top: -100px;
-    align-items: center;
-    margin-bottom: 0px;
+    text-align: center;
   }
+  .txt-container h1 {
+    margin-left: -10px;
+    margin-top: -30px;
+  }
+  .txt-container h3 {
+    font-size: 10px;
+  }
+
   .main-img {
-    width: 350px;
+    width: 200px;
     height: 50%;
+  }
+  .test2 {
+    margin-bottom: 600px;
+    margin-left: 50px;
+  }
+
+  .input-email {
+    width: 50%;
+  }
+  .container {
+    margin-left: -75px;
+  }
+  #body {
+    width: 150px;
   }
 }
 
@@ -138,18 +167,22 @@ error
   flex-direction: column;
   align-content: center;
   justify-content: center;
-  align-items: center;
-  margin-bottom: 50px;
-  margin-left: 120px;
+  /* align-items: center; */
+  margin-bottom: 30px;
   margin-top: -60px;
+  margin-left: 50px;
 }
 .txt-container h1 {
-  font-size: 38px;
+  font-size: 35px;
   color: #29553e;
+  margin-left: 10px;
 }
 .txt-container h3 {
-  font-size: 28px;
+  font-size: 23px;
   margin-top: -10px;
+  color: #647a6f;
+  margin-left: 45px;
+  font-weight: 600;
 }
 
 .txt-container h5 {
@@ -158,11 +191,14 @@ error
   color: #588157;
   font-weight: 400;
   font-size: 12px;
+  margin-left: 50px;
 }
 
 .form-1 {
-  margin-left: 150px;
   width: 350px;
+  margin-left: 50px;
+  margin-right: 120px;
+  margin-top: 10px;
 }
 .form-1 h1 {
   color: #2d6a4f;
@@ -230,12 +266,8 @@ button {
   text-align: center;
 }
 #body {
-  margin-top: 200px;
-  margin-bottom: 10px;
-  margin-left: 0px;
-
-  width: 1300px;
-  height: 100%;
+  margin-top: 100px;
+  margin-bottom: 20px;
 }
 .main-img {
   margin-left: 50px;
