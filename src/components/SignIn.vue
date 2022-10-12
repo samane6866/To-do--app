@@ -2,7 +2,7 @@
   <div id="body2">
     <div class="container">
       <div class="main-log">
-        <PersonalRouter :route="route" :buttonText="buttonText" />
+        <!-- <PersonalRouter :route="route" :buttonText="buttonText" /> -->
 
         <p v-if="errorMsg" class="">
           {{ errorMsg }}
@@ -171,7 +171,7 @@ const signIn = async () => {
 .login-txt h3 {
   font-size: 26px;
   margin-bottom: 0;
-  color: #2d6a4f;
+  color: #29553e;
   font-weight: bold;
 }
 .login-txt p {

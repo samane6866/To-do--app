@@ -1,6 +1,6 @@
 <template>
   <div class="test-3">
-    <p class="nav-icon">Cucti Task🌵</p>
+    <p class="nav-icon">CuctiTask🌵</p>
 
     <button class="log-nav" @click="signOut">Log-out</button>
     <div v-if="errorMessageContiner">

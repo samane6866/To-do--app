@@ -3,7 +3,11 @@
     <div class="container">
       <div>
         <div class="main-log">
-          <PersonalRouter :route="route" :buttonText="buttonText" />
+          <!-- <PersonalRouter :route="route" :buttonText="buttonText" /> -->
+          <div class="txt-container">
+            <h1>Register to CuctiTask</h1>
+            <p>Start organizing your tasks today!</p>
+          </div>
 
           <form @submit.prevent="signUp" class="form-1">
             <h1>Sign Up</h1>
@@ -113,6 +117,30 @@ error
   flex-direction: column;
   justify-content: space-evenly;
 }
+
+.txt-container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  margin-left: 120px;
+  margin-top: -60px;
+}
+.txt-container h1 {
+  font-size: 35px;
+  color: #29553e;
+}
+
+.txt-container p {
+  margin-bottom: 50px;
+  margin-top: -8px;
+  color: #588157;
+  font-weight: 400;
+  font-size: 20px;
+}
+
 .form-1 {
   margin-left: 150px;
   width: 350px;
@@ -192,5 +220,6 @@ button {
 }
 .main-img {
   margin-left: 150px;
+  height: 100%;
 }
 </style>
