@@ -6,7 +6,8 @@
           <!-- <PersonalRouter :route="route" :buttonText="buttonText" /> -->
           <div class="txt-container">
             <h1>Register to CuctiTask</h1>
-            <p>Start organizing your tasks today!</p>
+            <h3>Orgnize your life,finally.</h3>
+            <h5>Become focused,organized,and calm with CuctiTask!</h5>
           </div>
 
           <form @submit.prevent="signUp" class="form-1">
@@ -110,6 +111,20 @@ error
 
 <style scoped>
 @media only screen and (min-width: 320px) and (max-width: 736px) {
+  .form-1 {
+    width: 250px;
+    margin-left: 80px;
+  }
+  .txt-container {
+    margin-left: 50px;
+    margin-top: -100px;
+    align-items: center;
+    margin-bottom: 0px;
+  }
+  .main-img {
+    width: 350px;
+    height: 50%;
+  }
 }
 
 .main-log {
@@ -129,16 +144,20 @@ error
   margin-top: -60px;
 }
 .txt-container h1 {
-  font-size: 35px;
+  font-size: 38px;
   color: #29553e;
 }
+.txt-container h3 {
+  font-size: 28px;
+  margin-top: -10px;
+}
 
-.txt-container p {
+.txt-container h5 {
   margin-bottom: 50px;
   margin-top: -8px;
   color: #588157;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 12px;
 }
 
 .form-1 {
@@ -219,7 +238,7 @@ button {
   height: 100%;
 }
 .main-img {
-  margin-left: 150px;
+  margin-left: 50px;
   height: 100%;
 }
 </style>

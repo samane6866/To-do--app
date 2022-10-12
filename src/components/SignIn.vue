@@ -111,10 +111,10 @@ const signIn = async () => {
 <style scoped>
 @media only screen and (min-width: 320px) and (max-width: 736px) {
   .task-img {
-    width: 150px;
+    width: 180px;
   }
   .img-container {
-    margin-bottom: 500px;
+    margin-bottom: 600px;
   }
   .main-log {
     width: 80px;
