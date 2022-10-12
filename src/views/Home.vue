@@ -216,13 +216,38 @@ async function deleteOneItem(itemId) {
   margin-top: 200px; */
 
 @media only screen and (min-width: 320px) and (max-width: 736px) {
+  .pic-task {
+    width: 350px;
+  }
+
+  .input-field {
+    margin-top: 50px;
+  }
+
+  .task-2 {
+    width: 300px;
+  }
+  .task-1 {
+    width: 300px;
+  }
+  .Btn-block {
+    width: 150px;
+  }
+  .container3 {
+    padding-left: 12px;
+  }
+
+  .main-titel h1 {
+    font-size: 50px;
+    text-align: center;
+  }
 }
 
-.container3 .input-field {
+/* .container3 .input-field {
   /* position: relative; */
-  height: 64px;
-  width: 100%;
-}
+/* height: 64px;
+  width: 100%; */
+
 .text-container {
   display: flex;
   flex-direction: column;

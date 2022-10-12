@@ -131,3 +131,13 @@ Function to Complete Task
 # Next plan
 
 . responsive homepage
+
+# Wednsday 12-10-2022
+
+.Rsponsive homepage and sign-up
+
+# Next plan
+
+-compelete responsive of home page
+
+- start to work on presentation

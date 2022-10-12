@@ -11,7 +11,7 @@
 
         <hr />
       </div>
-      <p>© 2022 TaskApp. All rights reserved. Built with ❤️ by Samaneh</p>
+      <p>© 2022 TaskApp. All rights reserved.Built with ❤️ by Samaneh.</p>
     </div>
   </div>
 </template>
@@ -19,6 +19,28 @@
 <script setup></script>
 
 <style scoped>
+@media only screen and (min-width: 320px) and (max-width: 736px) {
+  .footer {
+    width: 360px;
+    height: 150px;
+  }
+  .icon {
+    display: block;
+    text-align: center;
+  }
+  .icon h2 {
+    font-size: 16px;
+  }
+
+  .icon p {
+    font-size: 16px;
+    font-weight: 300;
+  }
+  hr {
+    color: #efffef;
+  }
+}
+
 .container {
   margin-top: 600px;
 }

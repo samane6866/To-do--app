@@ -6,7 +6,7 @@
     <div class="edit-form" v-if="showForm">
       <input v-model="newtitle" type="text" class="form1" />
       <input v-model="newdescription" type="text" class="form2" />
-      <button @click="editItem"></button>
+      <button @click="editItem">🟢</button>
     </div>
 
     <div class="todo-btn">

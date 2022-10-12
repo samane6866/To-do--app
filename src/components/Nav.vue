@@ -61,16 +61,18 @@ async function signOut() {
 
 <style scoped>
 @media only screen and (min-width: 320px) and (max-width: 736px) {
-  .test-3 {
-    display: flex;
-    flex-direction: column;
-  }
-
   .nav-icon {
-    font-size: 18px;
+    font-size: 13px;
+    margin-top: 0px;
   }
   p::first-letter {
     font-size: 100%;
+  }
+  .log-nav {
+    padding: 5px 5px 10px 4px;
+    border-radius: 9999px;
+    font-size: 8px;
+    font-weight: bold;
   }
 }
 
