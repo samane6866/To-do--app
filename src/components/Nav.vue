@@ -62,11 +62,11 @@ async function signOut() {
 <style scoped>
 @media only screen and (min-width: 320px) and (max-width: 736px) {
   .nav-icon {
-    font-size: 13px;
+    font-size: 5px;
     margin-top: 0px;
   }
   p::first-letter {
-    font-size: 100%;
+    font-size: 50%;
   }
   .log-nav {
     padding: 5px 5px 10px 4px;
@@ -82,7 +82,7 @@ async function signOut() {
   align-content: flex-end;
   align-items: center;
   justify-content: space-between;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 
 .nav-icon {
@@ -104,12 +104,12 @@ p::first-letter {
   background-color: #4caf50; /* Green */
   border: none;
   color: white;
-  padding: 15px 32px;
+  padding: 10px 8px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
+  margin: 4px 55px;
   cursor: pointer;
 }
 </style>

@@ -40,7 +40,7 @@ body {
     "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
+
   background-color: rgb(247, 247, 246);
 }
 </style>

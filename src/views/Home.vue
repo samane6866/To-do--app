@@ -134,7 +134,6 @@
         </li>
       </ul> -->
       <div class="task-container">
-        <p>Aquí irán las tareas</p>
         <section class="taskList">
           <TaskItem
             v-for="task in taskList"
@@ -216,8 +215,30 @@ async function deleteOneItem(itemId) {
   margin-top: 200px; */
 
 @media only screen and (min-width: 320px) and (max-width: 736px) {
+  .try {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding-left: 250px;
+  }
+  .main-titel h1 {
+    font-size: 40px;
+    text-align: center;
+  }
   .pic-task {
     width: 250px;
+  }
+
+  .text-container h2 {
+    font-size: 30px;
+  }
+  .text-container h4 {
+    font-size: 15px;
+  }
+  .text-container h6 {
+    font-size: 20px;
   }
 
   .input-field {
@@ -236,25 +257,21 @@ async function deleteOneItem(itemId) {
   .container3 {
     padding-left: 12px;
   }
-
-  .main-titel h1 {
-    font-size: 50px;
-    text-align: center;
-  }
-  .try {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    margin-left: 400px;
-  }
 }
 
 /* .container3 .input-field {
   /* position: relative; */
 /* height: 64px;
   width: 100%; */
+
+.try {
+  /* display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center; */
+  margin-left: -290px;
+}
 
 .text-container {
   display: flex;
@@ -264,7 +281,7 @@ async function deleteOneItem(itemId) {
   align-items: center;
   font-size: 35px;
   text-align: center;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
 }
 .text-container h2 {
   font-weight: 600;
@@ -293,7 +310,7 @@ font .input-field {
   align-content: center;
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
+  /* margin-top: 100px; */
 }
 .task-2 {
   width: 600px;
@@ -379,7 +396,7 @@ font .input-field {
   margin-top: 200px;
 } */
 
-.cards {
+/* .cards {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -411,8 +428,8 @@ font .input-field {
   width: 100%;
   height: 100%;
   -webkit-backface-visibility: hidden; /* Safari */
-  backface-visibility: hidden;
-}
+/* backface-visibility: hidden; */
+/* } / */
 
 /* .flip-card-front {
   background-color: #bbb;

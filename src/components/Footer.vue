@@ -24,6 +24,7 @@
     width: 360px;
     height: 150px;
     background-color: rgb(247, 247, 246);
+    margin-top: 50px;
   }
   .icon {
     display: block;
@@ -43,10 +44,10 @@
 }
 
 .container {
-  margin-top: 600px;
+  margin-top: 50px;
 }
 .footer {
-  width: 1360px;
+  width: 100vw;
   height: 200px;
   margin: auto;
   background-color: #f4f3ee;
