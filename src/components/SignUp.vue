@@ -1,64 +1,80 @@
 <template>
-  <div id="body">
-    <div class="container">
-      <div>
-        <div class="main-log">
-          <!-- <PersonalRouter :route="route" :buttonText="buttonText" /> -->
-          <div class="txt-container">
-            <h1>Register to CuctiTask</h1>
-            <h3>Orgnize your life,finally.</h3>
-            <!-- <h5>Become focused and organized with CuctiTask!</h5> -->
-          </div>
-
-          <form @submit.prevent="signUp" class="form-1">
-            <h1>Sign Up</h1>
-            <p>Please fill in this form to creat an account.</p>
-            <hr />
-
-            <label class="label-email1" for="email">Email</label>
-            <input
-              class="input-email"
-              type="email"
-              placeholder="Enter Email"
-              v-model="email"
-              id="email"
-            />
-
-            <label class="label-email1" for="psw">Password</label>
-            <input
-              class=""
-              type="password"
-              placeholder="************"
-              v-model="password"
-              id="password"
-            />
-
-            <label class="label-email1" for="psw-confirm"
-              >Confirm Password</label
-            >
-            <input
-              class=""
-              type="password"
-              placeholder="confirm Password"
-              v-model="ConfirmPassword"
-              id="confirmPassword"
-            />
-
-            <div class="clear">
-              <button class="signupbtn" type="submit">Sign Up</button>
-            </div>
-            <p class="route-login">
-              <span class="">Have an account? </span>
-              <PersonalRouter :route="route" :buttonText="buttonText" />
-            </p>
-          </form>
+  <div class="test4">
+    <div>
+      <!-- <div class="left-side">
+        <div class="input-layout">
+          <label class="" for="email">Email</label>
+          <input
+            class=""
+            type="email"
+            placeholder="Enter Email"
+            v-model="email"
+            id="email"
+          />
         </div>
-      </div>
+      </div> -->
       <div class="test2">
         <img
           class="main-img"
           src="https://res.cloudinary.com/dlzo8wao1/image/upload/v1665519269/todo-img/try3_f6nxo7.png"
         />
+      </div>
+    </div>
+    <div id="">
+      <div class="">
+        <div>
+          <div class="main-log">
+            <!-- <PersonalRouter :route="route" :buttonText="buttonText" /> -->
+            <div class="txt-container">
+              <h1>Register to CuctiTask</h1>
+              <h3>Orgnize your life,finally.</h3>
+              <!-- <h5>Become focused and organized with CuctiTask!</h5> -->
+            </div>
+
+            <form @submit.prevent="signUp" class="form-1">
+              <h1>Sign Up</h1>
+              <p>Please fill in this form to creat an account.</p>
+              <hr />
+
+              <label class="label-email1" for="email">Email</label>
+              <input
+                class="input-email"
+                type="email"
+                placeholder="Enter Email"
+                v-model="email"
+                id="email"
+              />
+
+              <label class="label-email1" for="psw">Password</label>
+              <input
+                class=""
+                type="password"
+                placeholder="************"
+                v-model="password"
+                id="password"
+              />
+
+              <label class="label-email1" for="psw-confirm"
+                >Confirm Password</label
+              >
+              <input
+                class=""
+                type="password"
+                placeholder="confirm Password"
+                v-model="ConfirmPassword"
+                id="confirmPassword"
+              />
+
+              <div class="clear">
+                <button class="signupbtn" type="submit">Sign Up</button>
+              </div>
+              <p class="route-login">
+                <span class="">Have an account? </span>
+                <PersonalRouter :route="route" :buttonText="buttonText" />
+              </p>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -110,50 +126,23 @@ function to SignUp user to supaBase with a timeOut() method for showing the
 error
 
 <style scoped>
-@media only screen and (min-width: 320px) and (max-width: 736px) {
-  #body {
-    margin-top: 50px;
-  }
+/* new component */
 
-  .main-log {
-    width: 95px;
-    height: 750px;
-  }
+.input-layout {
+  display: flex;
+  flex-direction: column;
+}
 
-  .form-1 {
-    width: 250px;
-    margin-left: 10px;
-  }
-  .txt-container {
-    margin-left: 50px;
-    text-align: center;
-  }
-  .txt-container h1 {
-    margin-left: -10px;
-    margin-top: -39px;
-  }
-  .txt-container h3 {
-    font-size: 10px;
-  }
-
-  .main-img {
-    width: 200px;
-    height: 50%;
-  }
-  .test2 {
-    margin-bottom: 600px;
-    margin-left: 50px;
-  }
-
-  .input-email {
-    width: 50%;
-  }
-  .container {
-    margin-left: -75px;
-  }
-  #body {
-    width: 150px;
-  }
+.test4 {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  padding-left: 50px;
+}
+.main-img {
+  width: 400px;
 }
 
 .main-log {
@@ -175,7 +164,8 @@ error
 .txt-container h1 {
   font-size: 35px;
   color: #29553e;
-  margin-left: 10px;
+  margin-top: 100px;
+  /* margin-left: 50px; */
 }
 .txt-container h3 {
   font-size: 23px;
@@ -198,7 +188,7 @@ error
   width: 350px;
   margin-left: 50px;
   margin-right: 120px;
-  margin-top: 10px;
+  /* margin-top: 10px; */
 }
 .form-1 h1 {
   color: #2d6a4f;
@@ -272,5 +262,57 @@ button {
 .main-img {
   margin-left: 50px;
   height: 100%;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 736px) {
+  #body {
+    margin-top: 50px;
+  }
+
+  .main-log {
+    width: 95px;
+    height: 750px;
+  }
+
+  .form-1 {
+    width: 250px;
+    margin-left: -190px;
+  }
+  .txt-container {
+    margin-left: 50px;
+    text-align: center;
+  }
+  /* .txt-container h1 {
+    margin-left: -10px;
+    margin-top: -39px;
+  } */
+
+  .txt-container h1 {
+    margin-left: -70px;
+  }
+  .txt-container h3 {
+    margin-left: -30px;
+    font-weight: 400;
+  }
+
+  .main-img {
+    width: 250px;
+    height: 50%;
+    margin-left: -40px;
+    padding-bottom: 450px;
+  }
+  .test2 {
+    /* margin-bottom: 600px; */
+    margin-left: 50px;
+  }
+
+  /* .input-email {
+    /* width: 50%; */
+}
+.container {
+  margin-left: -75px;
+}
+#body {
+  width: 150px;
 }
 </style>

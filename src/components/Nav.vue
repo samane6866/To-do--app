@@ -1,6 +1,6 @@
 <template>
   <div class="test-3">
-    <p class="nav-icon">CuctiTask🌵</p>
+    <div class="logo-icon"><p class="nav-icon">CuctiTask🌵</p></div>
 
     <button class="log-nav" @click="signOut">Log-out</button>
     <div v-if="errorMessageContiner">
@@ -62,17 +62,22 @@ async function signOut() {
 <style scoped>
 @media only screen and (min-width: 320px) and (max-width: 736px) {
   .nav-icon {
-    font-size: 5px;
-    margin-top: 0px;
   }
   p::first-letter {
     font-size: 50%;
   }
   .log-nav {
-    padding: 5px 5px 10px 4px;
-    border-radius: 9999px;
+    /* padding: 5px 5px 10px 4px;
+    
     font-size: 8px;
-    font-weight: bold;
+    font-weight: bold; */
+    padding-right: 100px;
+    border-radius: 999px;
+  }
+  .test-3 {
+    width: 50px;
+    gap: 65px;
+    margin-top: -20px;
   }
 }
 

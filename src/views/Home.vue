@@ -214,51 +214,6 @@ async function deleteOneItem(itemId) {
   align-items: center;
   margin-top: 200px; */
 
-@media only screen and (min-width: 320px) and (max-width: 736px) {
-  .try {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    padding-left: 250px;
-  }
-  .main-titel h1 {
-    font-size: 40px;
-    text-align: center;
-  }
-  .pic-task {
-    width: 250px;
-  }
-
-  .text-container h2 {
-    font-size: 30px;
-  }
-  .text-container h4 {
-    font-size: 15px;
-  }
-  .text-container h6 {
-    font-size: 20px;
-  }
-
-  .input-field {
-    margin-top: 50px;
-  }
-
-  .task-2 {
-    width: 250px;
-  }
-  .task-1 {
-    width: 250px;
-  }
-  .Btn-block {
-    width: 100px;
-  }
-  .container3 {
-    padding-left: 12px;
-  }
-}
-
 /* .container3 .input-field {
   /* position: relative; */
 /* height: 64px;
@@ -476,6 +431,48 @@ font .input-field {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 736px) {
+  .try {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding-left: 250px;
+  }
+  .main-titel h1 {
+    font-size: 40px;
+    text-align: center;
+  }
+  .pic-task {
+    width: 250px;
+  }
+
+  .text-container h2 {
+    font-size: 30px;
+  }
+  .text-container h4 {
+    font-size: 15px;
+  }
+  .text-container h6 {
+    font-size: 15px;
+  }
+
+  .task-2 {
+    width: 250px;
+  }
+  .task-1 {
+    width: 250px;
+  }
+
+  .Btn-block {
+    width: 100px;
+  }
+  .container3 {
+    padding-left: 12px;
+  }
 }
 
 /* .input {
