@@ -1,8 +1,13 @@
 <template>
   <div class="test-3">
-    <div class="logo-icon"><p class="nav-icon">CuctiTask🌵</p></div>
+    <div class="logo-icon">
+      <p class="nav-icon">CuctiTask</p>
+    </div>
+    <button class="log-nav" @click="signOut">Log out</button>
 
-    <button class="log-nav" @click="signOut">Log-out</button>
+    <!-- <div class="nav-btn"> -->
+
+    <!-- </div> -->
     <div v-if="errorMessageContiner">
       <p>{{ errorMessage }}</p>
     </div>
@@ -60,27 +65,6 @@ async function signOut() {
 </script>
 
 <style scoped>
-@media only screen and (min-width: 320px) and (max-width: 736px) {
-  .nav-icon {
-  }
-  p::first-letter {
-    font-size: 50%;
-  }
-  .log-nav {
-    /* padding: 5px 5px 10px 4px;
-    
-    font-size: 8px;
-    font-weight: bold; */
-    padding-right: 100px;
-    border-radius: 999px;
-  }
-  .test-3 {
-    width: 50px;
-    gap: 65px;
-    margin-top: -20px;
-  }
-}
-
 .test-3 {
   display: flex;
   flex-direction: row;
@@ -116,5 +100,33 @@ p::first-letter {
   font-size: 16px;
   margin: 4px 55px;
   cursor: pointer;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 736px) {
+  .nav-icon {
+    font-size: 13px;
+    margin-left: 30px;
+  }
+
+  p::first-letter {
+    font-size: 100%;
+  }
+  .nav-btn {
+    margin-left: 5px;
+  }
+
+  .log-nav {
+    /* padding: 5px 5px 10px 4px; */
+
+    font-size: 8px;
+    font-weight: bold;
+    /* padding-right: 100px; */
+    border-radius: 999px;
+  }
+  .test-3 {
+    width: 100vw;
+    gap: 197px;
+    margin-top: -20px;
+  }
 }
 </style>

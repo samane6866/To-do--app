@@ -141,3 +141,7 @@ Function to Complete Task
 -compelete responsive of home page
 
 - start to work on presentation
+
+# Thursday 13-10-2022
+
+.work on home page/ sign-up responsive/done

@@ -19,30 +19,6 @@
 <script setup></script>
 
 <style scoped>
-@media only screen and (min-width: 320px) and (max-width: 736px) {
-  .footer {
-    width: 360px;
-    height: 150px;
-    background-color: rgb(247, 247, 246);
-    margin-top: 50px;
-  }
-  .icon {
-    display: block;
-    text-align: center;
-  }
-  .icon h2 {
-    font-size: 16px;
-  }
-
-  .icon p {
-    font-size: 16px;
-    font-weight: 300;
-  }
-  hr {
-    color: #efffef;
-  }
-}
-
 .container {
   margin-top: 50px;
 }
@@ -70,5 +46,29 @@
 h2::first-letter {
   font-size: 200%;
   color: #4caf50;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 736px) {
+  .footer {
+    width: 360px;
+    height: 150px;
+    background-color: rgb(247, 247, 246);
+    margin-top: 50px;
+  }
+  .icon {
+    display: block;
+    text-align: center;
+  }
+  .icon h2 {
+    font-size: 16px;
+  }
+
+  .icon p {
+    font-size: 8px;
+    font-weight: 300;
+  }
+  hr {
+    color: #efffef;
+  }
 }
 </style>

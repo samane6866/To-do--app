@@ -139,10 +139,10 @@ error
   align-content: center;
   justify-content: center;
   align-items: center;
-  padding-left: 50px;
+  /* padding-left: 50px; */
 }
 .main-img {
-  width: 400px;
+  width: 500px;
 }
 
 .main-log {
@@ -289,17 +289,18 @@ button {
 
   .txt-container h1 {
     margin-left: -70px;
+    font-size: 25px;
   }
   .txt-container h3 {
-    margin-left: -30px;
+    margin-left: -65px;
     font-weight: 400;
   }
 
   .main-img {
     width: 250px;
     height: 50%;
-    margin-left: -40px;
-    padding-bottom: 450px;
+    margin-left: -80px;
+    padding-bottom: 540px;
   }
   .test2 {
     /* margin-bottom: 600px; */

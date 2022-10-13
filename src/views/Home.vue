@@ -271,21 +271,23 @@ font .input-field {
   width: 600px;
   height: 30px;
   margin-top: 20px;
-  background-color: #f6fff8;
+  background-color: rgb(229 241 205);
   border-radius: 5px;
   padding: 5px;
-  box-shadow: inset 0 0 0 2px #fff, 0 0 0 4px #fff, 1px -3px 5px #9ca861,
+  box-shadow: inset 0 0 0 0 #fff, 0 0 0 2px #fff, 1px -3px 5px #9ca861,
     -3px 3px 10px #5ea260;
+  border: none;
 }
 .task-1 {
   width: 600px;
   height: 30px;
   margin-top: 20px;
-  background-color: #bce1c4;
+  background-color: rgb(204 221 171);
   border-radius: 5px;
   padding: 5px;
-  box-shadow: inset 0 0 0 2px #fff, 0 0 0 4px #fff, 1px -3px 5px #9ca861,
+  box-shadow: inset 0 0 0 0 #fff, 0 0 0 2px #fff, 1px -3px 5px #9ca861,
     -3px 3px 10px #5ea260;
+  border: none;
 }
 .Btn-block {
   background-color: #2d6a4f;
@@ -440,7 +442,7 @@ font .input-field {
     align-content: center;
     justify-content: center;
     align-items: center;
-    padding-left: 250px;
+    padding-left: 272px;
   }
   .main-titel h1 {
     font-size: 40px;
@@ -458,6 +460,7 @@ font .input-field {
   }
   .text-container h6 {
     font-size: 15px;
+    margin-top: 0.5px;
   }
 
   .task-2 {
@@ -471,7 +474,7 @@ font .input-field {
     width: 100px;
   }
   .container3 {
-    padding-left: 12px;
+    padding-left: 30px;
   }
 }
 

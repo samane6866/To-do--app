@@ -18,7 +18,7 @@
           <input
             class="input-email"
             type="email"
-            placeholder="dave@wuTangfinancial.com"
+            placeholder="user@youremail.com"
             v-model="email"
             id="email"
           />
@@ -45,7 +45,7 @@
             <button class="" type="submit">Sign In</button>
           </div>
           <p class="log-link">
-            <span class="">Don’t have an account?</span>
+            <span class="">Don’t have an account? </span>
 
             <PersonalRouter :route="route" :buttonText="buttonText" />
           </p>
