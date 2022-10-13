@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="try">
     <Nav />
     <div class="main-titel">
       <h1>Manage all your daily Task</h1>
@@ -217,7 +217,7 @@ async function deleteOneItem(itemId) {
 
 @media only screen and (min-width: 320px) and (max-width: 736px) {
   .pic-task {
-    width: 350px;
+    width: 250px;
   }
 
   .input-field {
@@ -225,13 +225,13 @@ async function deleteOneItem(itemId) {
   }
 
   .task-2 {
-    width: 300px;
+    width: 250px;
   }
   .task-1 {
-    width: 300px;
+    width: 250px;
   }
   .Btn-block {
-    width: 150px;
+    width: 100px;
   }
   .container3 {
     padding-left: 12px;
@@ -240,6 +240,14 @@ async function deleteOneItem(itemId) {
   .main-titel h1 {
     font-size: 50px;
     text-align: center;
+  }
+  .try {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: 400px;
   }
 }
 
@@ -406,7 +414,7 @@ font .input-field {
   backface-visibility: hidden;
 }
 
-.flip-card-front {
+/* .flip-card-front {
   background-color: #bbb;
   color: black;
 }
@@ -424,7 +432,7 @@ font .input-field {
 .taskList {
   display: flex;
   flex-wrap: wrap;
-}
+} */
 
 .task-list {
   background-color: rgb(248, 248, 240);

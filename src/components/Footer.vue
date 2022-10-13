@@ -23,6 +23,7 @@
   .footer {
     width: 360px;
     height: 150px;
+    background-color: rgb(247, 247, 246);
   }
   .icon {
     display: block;
