@@ -7,7 +7,7 @@
           src="https://res.cloudinary.com/dlzo8wao1/image/upload/v1665419337/todo-img/images_v5zha9.png"
           alt="cactus"
         /> -->
-        <h2>CuctiTask🌵</h2>
+        <h2>CuctiTask</h2>
 
         <hr />
       </div>
