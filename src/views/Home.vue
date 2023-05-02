@@ -2,7 +2,9 @@
   <div class="try">
     <Nav />
     <div class="main-titel">
-      <h1>Manage all your daily Task</h1>
+      <h1 class="animate__animated animate__backInDown">
+        Manage all your daily Task
+      </h1>
       <div class="first-pic">
         <img
           class="pic-task"
@@ -94,7 +96,7 @@
       <div class="text-container">
         <h2>A new great day.</h2>
         <h6>Become focused and organized with CuctiTask</h6>
-        <h4>Add a new task</h4>
+        <h4 class="animate__animated animate__backInLeft">Add a new task</h4>
       </div>
       <div class="input-field">
         <span>

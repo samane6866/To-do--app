@@ -30,7 +30,7 @@
             class="input-email"
             :type="passwordFieldType"
             onpaste="return false"
-            placeholder="************"
+            placeholder="userPassword"
             v-model="password"
             id="password"
           />

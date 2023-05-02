@@ -3,6 +3,8 @@ import { onMounted } from "vue";
 import { storeToRefs } from "pinia";
 import { useRouter } from "vue-router";
 import { useUserStore } from "./stores/user.js";
+import "animate.css";
+
 import { ref } from "vue";
 
 const router = useRouter();
