@@ -222,12 +222,12 @@ async function deleteOneItem(itemId) {
   width: 100%; */
 
 .try {
-  /* display: flex;
+  display: flex;
   flex-direction: column;
   align-content: center;
   justify-content: center;
-  align-items: center; */
-  margin-left: -290px;
+  align-items: center;
+  /* margin-left: -290px; */
 }
 
 .text-container {
@@ -444,7 +444,7 @@ font .input-field {
     align-content: center;
     justify-content: center;
     align-items: center;
-    padding-left: 272px;
+    /* padding-left: 272px; */
   }
   .main-titel h1 {
     font-size: 40px;

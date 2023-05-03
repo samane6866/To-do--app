@@ -30,7 +30,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div>
+  <div class="a">
     <router-view />
   </div>
 </template>
@@ -42,7 +42,11 @@ body {
     "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
 
   background-color: rgb(247, 247, 246);
+}
+.a {
+  width: 100%;
 }
 </style>

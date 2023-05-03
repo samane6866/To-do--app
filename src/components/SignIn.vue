@@ -4,9 +4,9 @@
       <div class="main-log">
         <!-- <PersonalRouter :route="route" :buttonText="buttonText" /> -->
 
-        <p v-if="errorMsg" class="">
+        <!-- <p v-if="errorMsg" class="">
           {{ errorMsg }}
-        </p>
+        </p> -->
         <form @submit.prevent="signIn" class="form-1">
           <div class="login-txt">
             <h3>Sign In to CuctiTask</h3>
@@ -34,6 +34,9 @@
             v-model="password"
             id="password"
           />
+          <p v-if="errorMsg" class="">
+            {{ errorMsg }}
+          </p>
           <span class="eye-icon">
             <EyeIcon
               :class="[passwordFieldIcon]"
@@ -52,11 +55,12 @@
         </form>
       </div>
       <div class="img-container">
-        <img
+        <!-- <img
           class="task-img"
           src="https://res.cloudinary.com/dlzo8wao1/image/upload/v1665419356/todo-img/todo_feol6b.jpg"
           alt="task.img"
-        />
+        /> -->
+        <SvgLogin></SvgLogin>
       </div>
     </div>
   </div>
@@ -69,6 +73,7 @@ import { supabase } from "../supabase";
 import { useRouter } from "vue-router";
 import { useUserStore } from "../stores/user";
 import { storeToRefs } from "pinia";
+import SvgLogin from "./SvgLogin.vue";
 
 // Route Variables
 const route = "/auth/sign-up";

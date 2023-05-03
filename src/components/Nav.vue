@@ -71,6 +71,7 @@ async function signOut() {
   align-content: flex-end;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
   /* margin-top: 20px; */
 }
 
