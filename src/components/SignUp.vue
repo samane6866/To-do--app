@@ -61,7 +61,7 @@
                 class=""
                 type="password"
                 placeholder="confirm Password"
-                v-model="ConfirmPassword"
+                v-model="confirmPassword"
                 id="confirmPassword"
               />
 
@@ -100,7 +100,9 @@ const errorMsg = ref(null);
 const redirect = useRouter();
 // function to SignUp user to supaBase with a timeOut() method for showing the error
 async function signUp() {
+  console.log(password.value, confirmPassword);
   if (password.value === confirmPassword.value) {
+    console.log("hola");
     try {
       await useUserStore().signUp(email.value, password.value);
       // if (error) throw error;
