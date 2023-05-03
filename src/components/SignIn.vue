@@ -34,7 +34,7 @@
             v-model="password"
             id="password"
           />
-          <p v-if="errorMsg" class="">
+          <p v-if="errorMsg" class="error-text">
             {{ errorMsg }}
           </p>
           <span class="eye-icon">
@@ -114,6 +114,12 @@ const signIn = async () => {
 </script>
 
 <style scoped>
+.error-text {
+  color: red;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+}
 @media only screen and (min-width: 320px) and (max-width: 736px) {
   .task-img {
     width: 180px;
