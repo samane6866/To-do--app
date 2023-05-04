@@ -55,12 +55,12 @@
         </form>
       </div>
       <div class="img-container">
-        <!-- <img
+        <img
           class="task-img"
           src="https://res.cloudinary.com/dlzo8wao1/image/upload/v1665419356/todo-img/todo_feol6b.jpg"
           alt="task.img"
-        /> -->
-        <SvgLogin></SvgLogin>
+        />
+        <!-- <SvgLogin></SvgLogin> -->
       </div>
     </div>
   </div>

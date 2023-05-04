@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div class="svg">
     <svg
       width="705"
@@ -249,9 +249,9 @@
       </g>
       <defs>
         <clipPath id="clip0_0_1">
-          <rect width="704.362" height="635" fill="white" />
+          <rect width="200.362" height="635" fill="white" />
         </clipPath>
       </defs>
     </svg>
   </div>
-</template>
+</template> -->
