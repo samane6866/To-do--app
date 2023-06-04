@@ -33,8 +33,7 @@
             placeholder="userPassword"
             v-model="password"
             id="password"
-            pattern="/d{6}"
-            title="Your password should be only 6 digit"
+            
           />
           <p v-if="errorMsg" class="error-text">
             {{ errorMsg }}
@@ -106,7 +105,7 @@ const signIn = async () => {
     redirect.push({ path: "/" });
   } catch (error) {
     // displays error message
-    errorMsg.value = `Error: ${error.message}`;
+    errorMsg.value = `❗ ${error.message}`;
     // hides error message
     setTimeout(() => {
       errorMsg.value = null;
@@ -119,8 +118,12 @@ const signIn = async () => {
 .error-text {
   color: red;
   text-align: center;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 400;
+  background-color: #ffffff;
+  border: 1px solid red;
+  padding: 10px;
+  
 }
 @media only screen and (min-width: 320px) and (max-width: 736px) {
   .task-img {

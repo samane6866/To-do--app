@@ -49,9 +49,11 @@
               <input
                 class=""
                 type="password"
-                placeholder="************"
+                placeholder="at least 6 number/123456"
                 v-model="password"
                 id="password"
+                pattern="\d{6}"
+            title="password must contain at least 6 number."
               />
 
               <label class="label-email1" for="psw-confirm"
