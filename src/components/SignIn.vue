@@ -33,6 +33,8 @@
             placeholder="userPassword"
             v-model="password"
             id="password"
+            pattern="[/d{6}]"
+            title="Your password should be only 6 digit"
           />
           <p v-if="errorMsg" class="error-text">
             {{ errorMsg }}
