@@ -9,7 +9,7 @@
         </p> -->
         <form @submit.prevent="signIn" class="form-1">
           <div class="login-txt">
-            <h3>Sign In to CuctiTask</h3>
+            <h3 class="animate__backInUp">Sign In to CuctiTask</h3>
             <P>Start organizing your tasks today!</P>
           </div>
           <div class="label-email">
@@ -33,7 +33,6 @@
             placeholder="userPassword"
             v-model="password"
             id="password"
-            
           />
           <p v-if="errorMsg" class="error-text">
             {{ errorMsg }}
@@ -123,7 +122,6 @@ const signIn = async () => {
   background-color: #ffffff;
   border: 1px solid red;
   padding: 10px;
-  
 }
 @media only screen and (min-width: 320px) and (max-width: 736px) {
   .task-img {
