@@ -94,8 +94,8 @@
 
     <div class="container3">
       <div class="text-container">
-        <h2>A new great day.</h2>
-        <h6>Become focused and organized with CuctiTask</h6>
+        <h2 class="animate__animated animate__fadeInDown">A new great day.</h2>
+        <h6 class="animate__animated  animate__fadeInUp">Become focused and organized with CuctiTask</h6>
         <h4 class="animate__animated animate__backInLeft">Add a new task</h4>
       </div>
       <div class="input-field">
@@ -479,7 +479,28 @@ font .input-field {
     padding-left: 30px;
   }
 }
+.animate__animated.animate__backInDown{
+  --animate-duration: 2s;
+}
 
+
+
+
+.animate__animated.animate__fadeInDown{
+  --animate-duration: 3s;
+
+}
+.animate__animated.animate__backInRight{
+  --animate-duration: 4s;
+
+         }
+.animate__animated.animate__backInLeft{
+  --animate-duration: 5s;
+
+
+
+
+        }
 /* .input {
   padding: 10px 20px 10px 10px;
   width: 100%;

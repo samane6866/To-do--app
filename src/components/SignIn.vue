@@ -9,8 +9,12 @@
         </p> -->
         <form @submit.prevent="signIn" class="form-1">
           <div class="login-txt">
-            <h3 class="animate__backInUp">Sign In to CuctiTask</h3>
-            <P>Start organizing your tasks today!</P>
+            <h3 class="animate__animated animate__backInDown">
+              Sign In to CuctiTask
+            </h3>
+            <P class="animate__animated animate__backInLeft"
+              >Start organizing your tasks today!</P
+            >
           </div>
           <div class="label-email">
             <label class="label-email1" for="">Email</label>
@@ -270,5 +274,12 @@ button {
 #body2 {
   padding-top: 20px;
   margin-bottom: 20px;
+}
+
+.animate__animated.animate__backInDown {
+  --animate-duration: 2s;
+}
+.animate__animated.animate__backInLeft {
+  --animate-duration: 4s;
 }
 </style>
